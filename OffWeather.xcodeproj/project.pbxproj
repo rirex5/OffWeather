@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3D2E749823A72C5B00D257CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2E749723A72C5B00D257CB /* AppDelegate.swift */; };
 		3D2E749A23A72C5B00D257CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2E749923A72C5B00D257CB /* SceneDelegate.swift */; };
-		3D2E749C23A72C5B00D257CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2E749B23A72C5B00D257CB /* ViewController.swift */; };
+		3D2E749C23A72C5B00D257CB /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2E749B23A72C5B00D257CB /* WeatherViewController.swift */; };
 		3D2E749F23A72C5B00D257CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D2E749D23A72C5B00D257CB /* Main.storyboard */; };
 		3D2E74A123A72C5F00D257CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D2E74A023A72C5F00D257CB /* Assets.xcassets */; };
 		3D2E74A423A72C5F00D257CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D2E74A223A72C5F00D257CB /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		3D2E749423A72C5B00D257CB /* OffWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OffWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D2E749723A72C5B00D257CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D2E749923A72C5B00D257CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3D2E749B23A72C5B00D257CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3D2E749B23A72C5B00D257CB /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		3D2E749E23A72C5B00D257CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3D2E74A023A72C5F00D257CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D2E74A323A72C5F00D257CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,15 +56,31 @@
 		3D2E749623A72C5B00D257CB /* OffWeather */ = {
 			isa = PBXGroup;
 			children = (
+				3D2E74AC23A72D9F00D257CB /* Model */,
+				3D2E74AB23A72D9600D257CB /* View */,
 				3D2E749723A72C5B00D257CB /* AppDelegate.swift */,
 				3D2E749923A72C5B00D257CB /* SceneDelegate.swift */,
-				3D2E749B23A72C5B00D257CB /* ViewController.swift */,
-				3D2E749D23A72C5B00D257CB /* Main.storyboard */,
 				3D2E74A023A72C5F00D257CB /* Assets.xcassets */,
-				3D2E74A223A72C5F00D257CB /* LaunchScreen.storyboard */,
 				3D2E74A523A72C5F00D257CB /* Info.plist */,
 			);
 			path = OffWeather;
+			sourceTree = "<group>";
+		};
+		3D2E74AB23A72D9600D257CB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3D2E74A223A72C5F00D257CB /* LaunchScreen.storyboard */,
+				3D2E749D23A72C5B00D257CB /* Main.storyboard */,
+				3D2E749B23A72C5B00D257CB /* WeatherViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3D2E74AC23A72D9F00D257CB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D2E749C23A72C5B00D257CB /* ViewController.swift in Sources */,
+				3D2E749C23A72C5B00D257CB /* WeatherViewController.swift in Sources */,
 				3D2E749823A72C5B00D257CB /* AppDelegate.swift in Sources */,
 				3D2E749A23A72C5B00D257CB /* SceneDelegate.swift in Sources */,
 			);
