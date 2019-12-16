@@ -8,5 +8,6 @@ target 'OffWeather' do
   # Pods for OffWeather
   pod 'RealmSwift'
   pod 'Charts'
-
+  pod 'PKHUD'
+  
 end
