@@ -57,6 +57,8 @@
 	<string>気圧を海面気圧に変換するための高度情報を取得するために使用</string>
 	<key>UIFileSharingEnabled</key>
 	<true/>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

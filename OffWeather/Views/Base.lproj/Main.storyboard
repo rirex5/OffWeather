@@ -64,7 +64,7 @@
                                                             <constraint firstAttribute="width" constant="75" id="pfv-GV-FXb"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="MXd-48-euw">
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="MXd-48-euw">
                                                         <rect key="frame" x="8" y="75" width="398" height="31"/>
                                                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </slider>
@@ -148,6 +148,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="1KV-pE-OgG"/>
+                    <connections>
+                        <outlet property="cloudyImageView" destination="SRS-Gi-5fs" id="BXv-HX-iJk"/>
+                        <outlet property="rainyImageView" destination="ChP-a2-s2D" id="EgJ-rN-B6h"/>
+                        <outlet property="sunnyImageView" destination="luM-4x-NFA" id="ZEF-yq-cU4"/>
+                        <outlet property="weatherSlider" destination="MXd-48-euw" id="8TT-nl-Yuc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

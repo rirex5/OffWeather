@@ -28,7 +28,7 @@ class WeatherModel {
         return weatherRLMs
     }
     
-    func readLast24h() -> [WeatherRLM] {
+    func readFor24h() -> [WeatherRLM] {
         let yesterday = Calendar.current.date(byAdding: .day, value: 1, to: Calendar.current.startOfDay(for: Date()))!
         var weatherRLMs: [WeatherRLM] = []
         do {
