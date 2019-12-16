@@ -8,6 +8,7 @@
 
 import UIKit
 import Charts
+import PKHUD
 
 class WeatherViewController: UIViewController, SchedulerServiceDelegate {
     
@@ -19,13 +20,10 @@ class WeatherViewController: UIViewController, SchedulerServiceDelegate {
     @IBOutlet weak var cloudyImageView: UIImageView!
     @IBOutlet weak var rainyImageView: UIImageView!
     @IBOutlet weak var weatherSlider: UISlider!
-    
-    
     @IBOutlet weak var seaLevelPressureLabel: UILabel!
     @IBOutlet weak var previousWeatherImageView: UIImageView!
     @IBOutlet weak var nextWeatherImageView: UIImageView!
     @IBOutlet weak var pressureChartView: LineChartView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +45,7 @@ class WeatherViewController: UIViewController, SchedulerServiceDelegate {
         pressureService.requestLocation()
         scheduler.delegate = self
         scheduler.setScheduler(updateInterval: 10)
+        HUD.show(.labeledProgress(title: "気圧・高度を取得中", subtitle: ""))
     }
     
     func initPressureChartView() {
@@ -71,10 +70,10 @@ class WeatherViewController: UIViewController, SchedulerServiceDelegate {
         // 右のラベルの非表示
         pressureChartView.rightAxis.enabled = false
         pressureChartView.drawBordersEnabled = false
-        
     }
     
     func update() {
+        HUD.hide()
         guard let pressure = pressureService.pressure else { return }
         guard let altitude = pressureService.altitude else { return }
         let weatherRLM = WeatherRLM(pressure: pressure, altitude: altitude, createdDate: Date())
