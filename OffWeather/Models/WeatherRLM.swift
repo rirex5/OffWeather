@@ -9,7 +9,7 @@
 import RealmSwift
 
 class WeatherRLM: Object {
-
+    
     @objc dynamic var weatherId: String = ""
     @objc dynamic var pressure: Double = 0.0
     @objc dynamic var altitude: Double = 0.0
@@ -35,10 +35,6 @@ class WeatherRLM: Object {
         self.altitude = altitude
         self.createdDate = createdDate
     }
-    
-//    func toWeather() -> Weather{
-//        return SongAdditionalInfo(songId: songId, bpm: bpm, rv: rv)
-//    }
 
 }
 

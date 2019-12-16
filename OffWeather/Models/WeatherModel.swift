@@ -9,6 +9,7 @@
 import RealmSwift
 
 class WeatherModel {
+    
     func save(weatherRLM: WeatherRLM) {
         do {
             let realm = try Realm()
@@ -28,12 +29,16 @@ class WeatherModel {
         return weatherRLMs
     }
     
-    func readFor24h() -> [WeatherRLM] {
-        let yesterday = Calendar.current.date(byAdding: .day, value: 1, to: Calendar.current.startOfDay(for: Date()))!
+    func readFor(hour: Int) -> [WeatherRLM] {
+        // 時間前
+        let comps = DateComponents(hour: -1 * hour, minute: 0)
+        let previousDate = Calendar.current.date(byAdding: comps, to: Date())!
         var weatherRLMs: [WeatherRLM] = []
         do {
             let realm = try Realm()
-            weatherRLMs = realm.objects(WeatherRLM.self).filter("createdDate <= %@", yesterday).map( { $0 } )
+            weatherRLMs = realm.objects(WeatherRLM.self).filter("createdDate >= %@", previousDate).map( { $0 } )
+            
+            print("previousDate: \(previousDate)")
         } catch {}
         weatherRLMs.sort { $0.createdDate < $1.createdDate }
         return weatherRLMs
