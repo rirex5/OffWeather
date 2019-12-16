@@ -8,12 +8,24 @@
 
 import UIKit
 
-class WeatherViewController: UIViewController {
-
+class WeatherViewController: UIViewController, SchedulerServiceDelegate {
+    
+    let pressureService = PressureService.shared
+    let scheduler = SchedulerService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        pressureService.requestAuthorization()
+        pressureService.requestAirpessure()
+        scheduler.delegate = self
+        scheduler.setScheduler(updateInterval: 5)
     }
+
+    func update() {
+        print("Pressure: \(pressureService.getPressure())")
+        print("SeaLevelPressure: \(pressureService.getSeaLevelPressure())")
+    }
+    
 
 
 }
