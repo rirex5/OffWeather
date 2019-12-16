@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,9 @@
 		3D2E74A423A72C5F00D257CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D2E74A223A72C5F00D257CB /* LaunchScreen.storyboard */; };
 		3D2E74B023A73F2500D257CB /* PressureService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2E74AF23A73F2500D257CB /* PressureService.swift */; };
 		3D2E74B223A74BDF00D257CB /* SchedulerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2E74B123A74BDF00D257CB /* SchedulerService.swift */; };
+		3D2E74B423A76BF400D257CB /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2E74B323A76BF400D257CB /* WeatherModel.swift */; };
+		3D2E74B623A76C0700D257CB /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2E74B523A76C0700D257CB /* Weather.swift */; };
+		3D2E74B823A76E7400D257CB /* WeatherRLM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2E74B723A76E7400D257CB /* WeatherRLM.swift */; };
 		DD9DE13913B9598B793D67A1 /* Pods_OffWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EB14772A63236DB239886E /* Pods_OffWeather.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +33,9 @@
 		3D2E74A523A72C5F00D257CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D2E74AF23A73F2500D257CB /* PressureService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PressureService.swift; sourceTree = "<group>"; };
 		3D2E74B123A74BDF00D257CB /* SchedulerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulerService.swift; sourceTree = "<group>"; };
+		3D2E74B323A76BF400D257CB /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		3D2E74B523A76C0700D257CB /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		3D2E74B723A76E7400D257CB /* WeatherRLM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRLM.swift; sourceTree = "<group>"; };
 		7CA4676C2076C9CB8DBCA1F1 /* Pods-OffWeather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OffWeather.debug.xcconfig"; path = "Target Support Files/Pods-OffWeather/Pods-OffWeather.debug.xcconfig"; sourceTree = "<group>"; };
 		FD48AAEBF96534B6A786BD59 /* Pods-OffWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OffWeather.release.xcconfig"; path = "Target Support Files/Pods-OffWeather/Pods-OffWeather.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,7 +58,6 @@
 				7CA4676C2076C9CB8DBCA1F1 /* Pods-OffWeather.debug.xcconfig */,
 				FD48AAEBF96534B6A786BD59 /* Pods-OffWeather.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -101,6 +106,9 @@
 		3D2E74AC23A72D9F00D257CB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3D2E74B323A76BF400D257CB /* WeatherModel.swift */,
+				3D2E74B523A76C0700D257CB /* Weather.swift */,
+				3D2E74B723A76E7400D257CB /* WeatherRLM.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -241,7 +249,10 @@
 				3D2E74B023A73F2500D257CB /* PressureService.swift in Sources */,
 				3D2E74B223A74BDF00D257CB /* SchedulerService.swift in Sources */,
 				3D2E749823A72C5B00D257CB /* AppDelegate.swift in Sources */,
+				3D2E74B423A76BF400D257CB /* WeatherModel.swift in Sources */,
 				3D2E749A23A72C5B00D257CB /* SceneDelegate.swift in Sources */,
+				3D2E74B823A76E7400D257CB /* WeatherRLM.swift in Sources */,
+				3D2E74B623A76C0700D257CB /* Weather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

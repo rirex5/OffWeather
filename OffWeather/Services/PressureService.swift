@@ -20,8 +20,8 @@ class PressureService: NSObject, CLLocationManagerDelegate {
     
     let altimeter = CMAltimeter()
     let locationManager = CLLocationManager()
-    var pressure: Double?
-    var altitude: Double?
+    public private(set) var pressure: Double?
+    public private(set) var altitude: Double?
     
     func requestAuthorization() {
         locationManager.requestAlwaysAuthorization()
@@ -53,22 +53,22 @@ class PressureService: NSObject, CLLocationManagerDelegate {
         altitude = locations.first!.altitude
     }
     
-    func getPressure() -> Double? {
-        return pressure
-    }
+//    func getPressure() -> Double? {
+//        return pressure
+//    }
     
-    func getSeaLevelPressure() -> Double? {
-        guard let pressure = pressure else {            
-            return nil
-        }
-        guard let altitude = altitude else {
-            return nil
-        }
-        let templature = 15.0
-        let num1 = 1.0-(0.0065*altitude)/(templature+0.0065*altitude+273.15)
-        let num2 = pow(num1, -5.257)
-        let seaLevelPressure = pressure * num2
-        return seaLevelPressure
-    }
+//    func getSeaLevelPressure() -> Double? {
+//        guard let pressure = pressure else {
+//            return nil
+//        }
+//        guard let altitude = altitude else {
+//            return nil
+//        }
+//        let templature = 15.0
+//        let num1 = 1.0-(0.0065*altitude)/(templature+0.0065*altitude+273.15)
+//        let num2 = pow(num1, -5.257)
+//        let seaLevelPressure = pressure * num2
+//        return seaLevelPressure
+//    }
     
 }
